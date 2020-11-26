@@ -1,0 +1,38 @@
+.top-nav {
+	display: flex;
+	align-items: center;
+}
+
+.nav-left {
+	display: flex;
+	align-items: center;
+	&__list {
+		margin-right: 8px;
+	}
+	&__item {
+		text-decoration: none;
+		font-size: 14px;
+		color: $color-gray;
+		display: flex;
+		align-items: center;
+	}
+}
+
+.table {
+	border: 1px solid $color-gray;
+	border-collapse: collapse;
+	display: table;
+
+	th, td {
+		border: 1px solid $color-gray;
+		text-align: left;
+		padding: 0px 5px;
+		display: table-cell;
+	}
+
+	@include responsive(md) {
+		th,td {
+			color: red;
+		}
+	}
+}

@@ -1,0 +1,39 @@
+$breakpoints: (
+    sm:     640px,
+    md:     768px,
+    lg:     1024px,
+    xl:     1280px,
+    2xl:    1536px
+);
+
+@mixin responsive($breakpoint) {
+
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    
+    @if $breakpoint == sm {
+        @media (min-width: $breakpoint-value) {
+            @content;
+        }
+    }
+    @if $breakpoint == md {
+        @media (min-width: $breakpoint-value) {
+            @content;
+        }
+    }
+    
+    @if $breakpoint == lg {
+        @media (min-width: $breakpoint-value) {
+            @content;
+        }
+    }
+    @if $breakpoint == xl {
+        @media (min-width: $breakpoint-value) {
+            @content;
+        }
+    }
+    @if $breakpoint == 2xl {
+        @media (min-width: $breakpoint-value) {
+            @content;
+        }
+    }
+}

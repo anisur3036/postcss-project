@@ -1,0 +1,12 @@
+$colorranges: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900);
+$colors: (red, gray, orange, blue, pink);
+@each $range in $colorranges {
+	@each $color in $colors {
+	    .text-#{$color}-#{$range} {
+	    	color: darken($color, $range/30);
+	    }
+	    .bg-#{$color}-#{$range} {
+	    	background-color: darken($color, $range/30);
+	    }
+	}
+}
