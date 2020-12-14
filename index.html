@@ -24,5 +24,29 @@
 				</nav>
 			</div>
 		</nav>
+		<div class="anis">
+			<a data-hello>Look</a>
+			<a data-back>Back</a>
+			<a>Here</a>
+			<a>Laravel</a>
+			<a>Design</a>
+		</div>
+<script>
+
+	function listen(type, selector, callback) {
+	  document.addEventListener(type, event => {
+	    const target = event.target.closest(selector);
+
+	    if (target) {
+	      callback(event, target);
+	    }
+	  });
+	}	
+	listen('click', 'a', (event, target) => {
+	  event.preventDefault();
+
+	  console.log(`Clicked ${target}`);
+	});
+</script>
 	</body>
 </html>
